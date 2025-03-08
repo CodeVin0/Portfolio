@@ -1,0 +1,75 @@
+/* Typing Animation */
+.typing-animation {
+    border-right: 3px solid var(--accent-color);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(30, end),
+               blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--accent-color) }
+}
+
+/* Floating Animation for Geometric Shape */
+@keyframes float {
+    0% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30%) rotate(180deg);
+    }
+    100% {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Skill Icon Hover Animation */
+@keyframes glowingGold {
+    0% {
+        box-shadow: 0 0 5px var(--golden-shadow);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--golden-shadow),
+                    0 0 30px var(--golden-shadow);
+    }
+    100% {
+        box-shadow: 0 0 5px var(--golden-shadow);
+    }
+}
+
+.skill-icon:hover {
+    animation: glowingGold 2s infinite;
+}
+
+/* Card Flip Animation */
+@keyframes flipIn {
+    from {
+        transform: rotateY(-180deg);
+    }
+    to {
+        transform: rotateY(0);
+    }
+}
+
+.cert-card-inner {
+    animation: flipIn 0.8s ease-out;
+}
