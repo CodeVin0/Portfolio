@@ -140,7 +140,7 @@ nav ul {
     height: 250px;
     background: linear-gradient(45deg, var(--hover-color), var(--accent-color), var(--text-color));
     border-radius: 50%;
-    animation: float 1.2s ease-in-out infinite;
+    animation: float 1.5s ease-in-out infinite;
 }
 
 /* About Section */
@@ -305,43 +305,64 @@ nav ul {
 /* Skills Section */
 .skills-section {
     padding: 100px 0;
-    background-color: var(--secondary-bg);
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 30px;
-    justify-items: center;
-}
-
-.skill-item {
+    background-color: var(--primary-bg-bg);
     position: relative;
-    width: 100px;
-    height: 115px;
-    perspective: 1000px;
+    text-align: center;
 }
 
-.skill-icon {
-    width: 100%;
-    height: 100%;
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.hexagon {
+    width: 100px;
+    height: 110px;
+    background-color: #222;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--card-bg);
+    position: relative;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    transition: all var(--transition-speed) ease-out;
+    transition: transform 0.3s, background-color 0.3s;
     cursor: pointer;
 }
-
-.skill-icon:hover {
-    transform: translateY(-25px);
-    border-color: var(--golden-shadow);
-    box-shadow: 0 0 20px var(--golden-shadow);
-    background-color: var(--golden-shadow);
-    color: var(--card-bg);
+.hexagon:hover, .hexagon.active {
+    transform: translateY(-20px);
+    background-color: #fbc531;
+    color: #222;
 }
 
+.popup-box {
+    position: absolute;
+    top: calc(85% + 10px); /* Muncul di bawah "My Skills" dengan jarak 10px */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    background: #222;
+    color: #fbc531;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(243, 173, 23, 0.685);
+    padding: 20px;
+    z-index: 100;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fbc531;
+    font-size: 20px;
+    cursor: pointer;
+}
 /* Certifications Section */
 .certifications-section {
     padding: 100px 0;
@@ -442,7 +463,7 @@ nav ul {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--card-bg);
+    background-color: var(--accent-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -450,8 +471,7 @@ nav ul {
 }
 
 .social-link:hover {
-    transform: translateY(-5px);
-    background-color: var(--accent-color);
+    transform: translateY(-7px);
 }
 
 .copyright {
