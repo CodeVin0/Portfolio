@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.view-more-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             // Add your view more functionality here
-            alert('View More clicked!');
+            // alert("It's Need more Page");
         });
     });
 
