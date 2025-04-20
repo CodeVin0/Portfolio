@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Muhammad Kevin - Backend Developer Portfolio">
     <title>Muhammad Kevin - Portfolio</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="animations.css">
+    <!-- Favicon -->
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
     <!-- Navigation -->
     <header>
         <div class="container">
             <div class="logo">
                 <a href="#" class="logo-text">Vin</a>
             </div>
-            <!-- Tambahkan ini di dalam header .container -->
             <div class="menu-toggle" id="menu-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
-              </div>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#about" class="nav-link">About</a></li>
@@ -32,223 +39,176 @@
         </div>
     </header>
 
-    Tambahkan ini di dalam header .container
-<div class="menu-toggle" id="menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <h1>
-                    <span class="greeting">Hello World, I'm <br> </span>
-                    <span class="name typing-animation" id="name"></span>
-                </h1>
-                <p class="role">I'm a <span class="highlight" id="highlight">Backend Developer</span></p>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>
+                        <span class="greeting">Hello World, I'm <br></span>
+                        <span class="name typing-animation" id="name"></span>
+                    </h1>
+                    <p class="role">I'm a <span class="highlight" id="highlight">Backend Developer</span></p>
+                </div>
+                <model-viewer class="geometric-shape" src="/image/star.glb" alt="3D Star Model"
+                    auto-rotate camera-controls ar>
+                </model-viewer>
             </div>
-            <model-viewer class="geometric-shape" src="/image/star.glb" alt="Bumi 3D"
-            auto-rotate camera-controls
-            ar>
-  </model-viewer>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="profile-image">
-                    <img src="image/M.Kevin-removebg-preview-removebg-preview.png?height=400&width=400" alt="Profile Image" class="profile-img">
-                </div>
-                <div class="about-text">
-                    <h2>ABOUT ME</h2>
-                    <p>
-                        Assalamualaikum 🤝
-Halo! Nama saya Muhammad Kevin, Panggil aja Kevin. <br>
-Saya seorang siswa SMKN 4 Bandung jurusan Rekayasa Perangkat Lunak (RPL). <br>
-Saya tertarik dengan pengembangan web dan backend development. <br>
-<br>
-Saya cukup mahir dalam bahasa pemrograman PHP, JavaScript, Java, dan SQL. <br>
-Saya juga terbiasa menggunakan Visual Studio Code sebagai teks editor <br>
-dan Laravel sebagai framework utama, <br>
-serta beberapa tools lain seperti Git, MySQL, Postman, dan React. <br>
-<br>
-Saya telah menyelesaikan berbagai proyek mandiri dan tim, <br>
-salah satunya adalah membuat Aplikasi <a href="#projects" style="color: inherit; text-decoration: none;">Performance Management</a> <br> 
-yang membantu HCM dalam mendata karyawan secara efisien setiap harinya.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="image/projectTEFA.png?height=250&width=400" alt="Teaching Factory">
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="profile-image">
+                        <img src="image/M.Kevin-removebg-preview-removebg-preview.png?height=400&width=400" alt="Profile Image of Muhammad Kevin" class="profile-img" loading="lazy">
                     </div>
-                    <div class="project-info">
-                        <h3>Teaching Factory with JagoolT</h3>
-                        <p>Project Pembuatan dan Pengembangan website Performance Management</p>
-                        <a href="https://codevin0.github.io/PerfeGement" target="_blank"><button class="view-more-btn">View More</button></a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="image/viewFromTMDBAPI.png?height=250&width=400" alt="TMDBAPI">
-                    </div>
-                    <div class="project-info">
-                        <h3>API From TMDB</h3>
-                        <p>Mengintegrasikan API TMDB dengan tampilan web</p>
-                        <br>
-                        <a href="https://codevin0.github.io/TMDBGetAPI" target="_blank"><button class="view-more-btn">View More</button></a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="image/chatbot.png?height=250&width=400" alt="AIChatBot">
-                    </div>
-                    <div class="project-info">
-                        <h3>Simple Chatbot</h3>
-                        <p>Membuat ChatBot sederhana menggunakan API HUGS</p>
-                        <br>
-                        <a href="https://codevin0.github.io/SimpleChatBot" target="_blank"><button class="view-more-btn">View More</button></a>
+                    <div class="about-text">
+                        <h2>ABOUT ME</h2>
+                        <p>
+                            Assalamualaikum 🤝<br>
+                            Halo! Nama saya Muhammad Kevin, Panggil aja Kevin. <br>
+                            Saya seorang siswa SMKN 4 Bandung jurusan Rekayasa Perangkat Lunak (RPL). <br>
+                            Saya tertarik dengan pengembangan web dan backend development. <br>
+                            <br>
+                            Saya cukup mahir dalam bahasa pemrograman PHP, JavaScript, Java, dan SQL. <br>
+                            Saya juga terbiasa menggunakan Visual Studio Code sebagai teks editor <br>
+                            dan Laravel sebagai framework utama, <br>
+                            serta beberapa tools lain seperti Git, MySQL, Postman, dan React. <br>
+                            <br>
+                            Saya telah menyelesaikan berbagai proyek mandiri dan tim, <br>
+                            salah satunya adalah membuat Aplikasi <a href="#projects" style="color: inherit; text-decoration: none;">Performance Management</a> <br> 
+                            yang membantu HCM dalam mendata karyawan secara efisien setiap harinya.
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-        <h1 class="section-title">My Skills</h1>
-        <div class="popup-box" id="popupBox">
-            <button class="close-btn" onclick="hidePopup(event)">&times;</button>
-            <p id="popupText"></p>
-        </div>
-        <div class="popup-box" id="popupBoxClick">
-            <button class="close-btn" onclick="hidePopupclick(event)">&times;</button>
-            <p id="popupTextClick"></p>
-        </div>
-        <div class="skills-container">
-            <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan HTML di 20+ Project')"         onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan HTML di 20+ Project')">       HTML</div> <br>
-            <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan CSS di 15+ Project')"          onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan CSS di 15+ Project')">        CSS</div> <br>
-            <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan BootStrap di 3 Project')"      onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan BootStrap di 3 Project')">    Bootstrap</div> <br>
-            <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan Java di 10+ Project')"         onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan Java di 10+ Project')">       Java</div> <br>
-            <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan JavaScript di 5+ Project')"    onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan JavaScript di 5+ Project')">  JavaScript</div> <br>
-            <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan Python di 5+ Project')"        onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan Python di 5+ Project')">      Python</div> <br>
-            <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan PHP di 25+ Project')"          onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan PHP di 25+ Project')">        PHP</div> <br>
-            <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan MySQL di 10+ Project')"        onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan MySQL di 10+ Project')">      MySQL</div> <br>
-            <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan Laravel di 10+ Project')"      onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan Laravel di 10+ Project')">    Laravel</div> <br>
-            <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan Git di 3 Project')"            onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan Git di 3 Project')">          Git</div><br>
-        </div>
-        </div>
-        
-        <script>
-            let activeHexagon = null;
-    
-            function showPopup(element, text) {
-                if (activeHexagon) {
-                    activeHexagon.classList.remove('active');
-                }
-                element.classList.add('active');
-                activeHexagon = element;
-                
-                document.getElementById('popupText').innerText = text;
-                document.getElementById('popupBox').style.display = 'flex';
-                document.getElementById('popupBox').style.zIndex += 1;
-            }
-
-            function showPopupClick(element, text) {
-                if (activeHexagon) {
-                    activeHexagon.classList.remove('active');
-                }
-                element.classList.add('active');
-                activeHexagon = element;
-                
-                document.getElementById('popupTextClick').innerText = text;
-                document.getElementById('popupBoxClick').style.display = 'flex';
-            }
-    
-            function hidePopup(event) {
-                if (event) event.stopPropagation();
-                document.getElementById('popupBox').style.display = 'none';
-                if (activeHexagon) {
-                    activeHexagon.classList.remove('active');
-                    activeHexagon = null;
-                }
-            }
-
-            function hidePopupclick(event) {
-                if (event) event.stopPropagation();
-                document.getElementById('popupBoxClick').style.display = 'none';
-                if (activeHexagon) {
-                    activeHexagon.classList.remove('active');
-                    activeHexagon = null;
-                }
-            }
-        </script>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications-section">
-        <div class="container">
-            <h2 class="section-title">Certifications</h2>
-            <div class="certifications-grid">
-                <div class="cert-card">
-                    <div class="cert-card-inner">
-                        <div class="cert-back">
-                            <h3>Sertifikat Pelatihan Data Analitik Digitalent Kominfo</h3>
-                            <a href="image/Sertifikat digitalent DA Muhammad Kevin.pdf" target="_blank">
-                            <button class="view-cert-btn">View Certificate</button>
-                            </a>
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/projectTEFA.png?height=250&width=400" alt="Teaching Factory Project Screenshot" loading="lazy">
                         </div>
-                        <div class="cert-front">
-                            <img src="image/logo-kominfo-digitalent.png?height=250&width=400" alt="Certificate 1">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cert-card">
-                    <div class="cert-card-inner">
-                        <div class="cert-front">
-                            <img src="image/sertifikat-idspora.png?height=250&width=400" alt="Certificate 2">
-                        </div>
-                        <div class="cert-back">
-                            <h3>Sertifikat Pelatihan Desain UI Figma IdSpora</h3>
-                            <a href="image/Sertifikat Figma Muhammad Kevin Alfarizi.pdf" target="_blank">
-                            <button class="view-cert-btn">View Certificate</button>
+                        <div class="project-info">
+                            <h3>Teaching Factory with JagoolT</h3>
+                            <p>Project Pembuatan dan Pengembangan website Performance Management</p>
+                            <a href="https://codevin0.github.io/PerfeGement" target="_blank" rel="noopener noreferrer">
+                                <button class="view-more-btn">View More</button>
                             </a>
                         </div>
                     </div>
-                </div>
 
-                <div class="cert-card">
-                    <div class="cert-card-inner">
-                        <div class="cert-front">
-                            <img src="image/hacker.png?height=250&width=400" alt="Certificate 3">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/viewFromTMDBAPI.png?height=250&width=400" alt="TMDB API Project Screenshot" loading="lazy">
                         </div>
-                        <div class="cert-back">
-                            <h3>Sertifikasi Data Hacking (Be Careful)</h3>
-                            <a href="evilWeb.html" target="_blank">
-                            <button class="view-cert-btn">View Certificate</button>
+                        <div class="project-info">
+                            <h3>API From TMDB</h3>
+                            <p>Mengintegrasikan API TMDB dengan tampilan web</p>
+                            <a href="https://codevin0.github.io/TMDBGetAPI" target="_blank" rel="noopener noreferrer">
+                                <button class="view-more-btn">View More</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="image/chatbot.png?height=250&width=400" alt="Chatbot Project Screenshot" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <h3>Simple Chatbot</h3>
+                            <p>Membuat ChatBot sederhana menggunakan API HUGS</p>
+                            <a href="https://codevin0.github.io/SimpleChatBot" target="_blank" rel="noopener noreferrer">
+                                <button class="view-more-btn">View More</button>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2 class="section-title">My Skills</h2>
+                <div class="popup-box" id="popupBox">
+                    <button class="close-btn" onclick="hidePopup(event)">&times;</button>
+                    <p id="popupText"></p>
+                </div>
+                <div class="popup-box" id="popupBoxClick">
+                    <button class="close-btn" onclick="hidePopupclick(event)">&times;</button>
+                    <p id="popupTextClick"></p>
+                </div>
+                <div class="skills-container">
+                    <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan HTML di 20+ Project')" onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan HTML di 20+ Project')">HTML</div>
+                    <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan CSS di 15+ Project')" onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan CSS di 15+ Project')">CSS</div>
+                    <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan BootStrap di 3 Project')" onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan BootStrap di 3 Project')">Bootstrap</div>
+                    <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan Java di 10+ Project')" onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan Java di 10+ Project')">Java</div>
+                    <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan JavaScript di 5+ Project')" onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan JavaScript di 5+ Project')">JavaScript</div>
+                    <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan Python di 5+ Project')" onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan Python di 5+ Project')">Python</div>
+                    <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan PHP di 25+ Project')" onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan PHP di 25+ Project')">PHP</div>
+                    <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan MySQL di 10+ Project')" onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan MySQL di 10+ Project')">MySQL</div>
+                    <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan Laravel di 10+ Project')" onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan Laravel di 10+ Project')">Laravel</div>
+                    <div class="hexagon" onclick="showPopupClick(this, ' Menggunakan Git di 3 Project')" onmouseleave="hidePopup()" onmouseover="showPopup(this, ' Menggunakan Git di 3 Project')">Git</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications-section">
+            <div class="container">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <div class="cert-card-inner">
+                            <div class="cert-back">
+                                <h3>Sertifikat Pelatihan Data Analitik Digitalent Kominfo</h3>
+                                <a href="image/Sertifikat digitalent DA Muhammad Kevin.pdf" target="_blank" rel="noopener noreferrer">
+                                    <button class="view-cert-btn">View Certificate</button>
+                                </a>
+                            </div>
+                            <div class="cert-front">
+                                <img src="image/logo-kominfo-digitalent.png?height=250&width=400" alt="Digitalent Kominfo Certificate" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-card-inner">
+                            <div class="cert-front">
+                                <img src="image/sertifikat-idspora.png?height=250&width=400" alt="IdSpora Certificate" loading="lazy">
+                            </div>
+                            <div class="cert-back">
+                                <h3>Sertifikat Pelatihan Desain UI Figma IdSpora</h3>
+                                <a href="image/Sertifikat Figma Muhammad Kevin Alfarizi.pdf" target="_blank" rel="noopener noreferrer">
+                                    <button class="view-cert-btn">View Certificate</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-card-inner">
+                            <div class="cert-front">
+                                <img src="image/hacker.png?height=250&width=400" alt="Hacking Certificate" loading="lazy">
+                            </div>
+                            <div class="cert-back">
+                                <h3>Sertifikasi Data Hacking (Be Careful)</h3>
+                                <a href="evilWeb.html" target="_blank" rel="noopener noreferrer">
+                                    <button class="view-cert-btn">View Certificate</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -259,24 +219,24 @@ yang membantu HCM dalam mendata karyawan secara efisien setiap harinya.
                     <p>Backend Developer | Passionate in Software Development</p>
                 </div>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/muhammad-kevin-alfarizi-878a0a332?" class="social-link linkedin" target="_blank">
+                    <a href="https://www.linkedin.com/in/muhammad-kevin-alfarizi-878a0a332?" class="social-link linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                         <div class="social-image">
-                        <img src="image/linkedin.png" height="40px" width="40px" alt="LinkedIn">
+                            <img src="image/linkedin.png" height="40" width="40" alt="LinkedIn">
                         </div>
                     </a>
-                    <a href="https://wa.me/0895606175943" class="social-link whatsapp" target="_blank">
+                    <a href="https://wa.me/0895606175943" class="social-link whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Contact">
                         <div class="social-image">
-                        <img src="image/whatsapp.png" height="40px" width="40px" alt="WhatsApp">
+                            <img src="image/whatsapp.png" height="40" width="40" alt="WhatsApp">
                         </div>
                     </a>
-                    <a href="https://www.instagram.com/kevinkevin_kevinkevin/" class="social-link instagram" target="_blank">
+                    <a href="https://www.instagram.com/kevinkevin_kevinkevin/" class="social-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
                         <div class="social-image">
-                        <img src="image/instagram.png" height="40px" width="40px" alt="Instagram">
+                            <img src="image/instagram.png" height="40" width="40" alt="Instagram">
                         </div>
                     </a>
-                    <a href="https://github.com/CodeVin0" class="social-link github" target="_blank">
+                    <a href="https://github.com/CodeVin0" class="social-link github" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                         <div class="social-image">
-                        <img src="image/github.png" height="40px" width="40px" alt="GitHub">
+                            <img src="image/github.png" height="40" width="40" alt="GitHub">
                         </div>
                     </a>
                 </div>
@@ -287,20 +247,13 @@ yang membantu HCM dalam mendata karyawan secara efisien setiap harinya.
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <script>
-        const toggle = document.getElementById('menu-toggle');
-        const navLinks = document.querySelector('nav ul');
-      
-        toggle.addEventListener('click', () => {
-          navLinks.classList.toggle('active');
-        });
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
 
-        document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('active');
-  });
-});
-      </script>
+    <script src="script.js"></script>
 </body>
 </html>
