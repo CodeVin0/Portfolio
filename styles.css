@@ -290,7 +290,7 @@ nav ul {
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(255, 153, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(255, 153, 0, 0.7);
 }
 
 .project-image {
