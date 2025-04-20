@@ -15,6 +15,12 @@
             <div class="logo">
                 <a href="#" class="logo-text">Vin</a>
             </div>
+            <!-- Tambahkan ini di dalam header .container -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             <nav>
                 <ul>
                     <li><a href="#about" class="nav-link">About</a></li>
@@ -26,6 +32,13 @@
         </div>
     </header>
 
+    Tambahkan ini di dalam header .container
+<div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
         <div class="container">
@@ -36,7 +49,7 @@
                 </h1>
                 <p class="role">I'm a <span class="highlight" id="highlight">Backend Developer</span></p>
             </div>
-            <model-viewer class="geometric-shape" src="image/star.glb" alt="Bumi 3D"
+            <model-viewer class="geometric-shape" src="/image/star.glb" alt="Bumi 3D"
             auto-rotate camera-controls
             ar>
   </model-viewer>
@@ -275,5 +288,19 @@ yang membantu HCM dalam mendata karyawan secara efisien setiap harinya.
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('nav ul');
+      
+        toggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+  });
+});
+      </script>
 </body>
 </html>
