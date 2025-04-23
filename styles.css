@@ -152,6 +152,7 @@ nav ul {
 
 .hero-content {
   max-width: 600px;
+  margin-right: 250px;
 }
 
 .hero-content h1 {
@@ -187,8 +188,8 @@ nav ul {
 
 .geometric-shape {
   position: absolute;
-  right: 10%;
-  top: 35%;
+  margin-left: 580px;
+  /* margin-top: 1px; */
   width: 250px;
   height: 250px;
   background: linear-gradient(45deg, var(--hover-color), var(--accent-color), var(--text-color));
@@ -290,7 +291,7 @@ nav ul {
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(255, 153, 0, 0.7);
+  box-shadow: 0 10px 30px rgba(255, 153, 0, 0.685);
 }
 
 .project-image {
