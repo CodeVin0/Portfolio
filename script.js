@@ -200,12 +200,12 @@ document.addEventListener("DOMContentLoaded", () => {
   
       // Wait for the transition to complete before hiding
       setTimeout(() => {
-        popupBox.style.display = "none"
+        // popupBox.style.display = "none"
         if (activeHexagon) {
           activeHexagon.classList.remove("active")
           activeHexagon = null
         }
-      }, 300)
+      }, 100)
     }
   
     function hidePopupclick(event) {
